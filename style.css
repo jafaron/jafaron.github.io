@@ -263,7 +263,7 @@ section{
 }
 
 .education .pendidikan, .pengalaman{
-    width: 400px;
+    width: 350px;
     height: 200px;
     background-color: #1e1e25;
     text-align: left;
@@ -428,7 +428,7 @@ footer{
 
 /* responsive*/
 
-@media screen and (max-width: 7682px) {
+@media screen and (max-width: 992px) {
     .container-fluid{
         margin-left: 0px;
     }
@@ -472,7 +472,7 @@ footer{
 
     /* skill */
     .skill .bar h5{
-        margin-left: 55px;
+        margin-left: 0px;
     }
     .skill .progress{
         margin: auto;
@@ -508,6 +508,104 @@ footer{
     }
     .contact .kontak{
         margin-top: -130px;
+    }
+    .contact .col-sm-4{
+        margin-bottom: 220px;
+    }
+    .contact iframe{
+        margin-top: 150px;
+    }
+    /* akkhir kontak */
+}
+
+
+@media screen and (max-width: 768px) {
+    .container-fluid{
+        margin-left: 0px;
+    }
+    /* jumbotron */
+    .hello{
+        margin: auto;
+    }
+    .jumbotron .container{
+        text-align: center;
+        margin-top: 10px;
+        padding-left: 0px;
+    }
+    .foto{
+        text-align: center;
+    }
+    .jumbotron .foto img{
+        max-width: 150px;
+        margin: 30px;
+        position: relative;
+        text-align: center;
+    }
+    /* akhir jumbotron */
+
+    /* about */
+    .about .about-content{
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+    /* akhir about */
+
+    /* pages */
+    .pages{
+        margin-top: 100px;
+    }
+    .pages .col-sm-4{
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 10px;
+    }
+    /* akhir pages */
+
+    /* skill */
+    .skill .bar h5{
+        margin-left: 25px;
+    }
+    .skill .progress{
+        margin: auto;
+    }
+
+    /* circle */
+    .skill{
+        margin-top: -10px;
+    }
+    .skill .col-sm-6{
+        margin-top: 50px;
+    }
+    .skill .col-sm-6 .row .col-6{
+        margin-bottom: 20px;
+        margin-right: -75px;
+        margin-left: 25px;
+    }
+
+    /* akhir skill */
+
+    /* education */
+    .education{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .education .col-sm-6{
+        margin-bottom: 50px;
+    }
+
+    /* education */
+
+    /* kontak */
+    .contact{
+        min-height: 800px;
+        margin-top: 0px;
+    }
+    .contact .row h4{
+        margin-left: 0px;
+    }
+    .contact .kontak{
+        margin-top: -130px;
+        margin-left: -25px;
     }
     .contact .col-sm-4{
         margin-bottom: 220px;

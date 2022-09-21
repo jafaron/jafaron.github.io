@@ -428,7 +428,7 @@ footer{
 
 /* responsive*/
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 7682px) {
     .container-fluid{
         margin-left: 0px;
     }

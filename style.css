@@ -1,0 +1,519 @@
+@font-face {
+    font-family: "aileron";
+    src: url('font/Aileron-Regular.woff') format('woff');
+}
+body{
+    font-family:  'aileron';
+}
+
+h1,h2, h3, h4, h5, p{
+    color: azure;
+}
+section{
+    min-height: 500px;
+
+}
+.container-fluid{
+    margin-left: 190px;
+}
+.navbar-nav {
+    margin-right: 100px;
+}
+
+/* jumbotron */
+.jumbotron{
+    padding: 20px;
+    height: 550px;  
+}
+.jumbotron .container{
+    margin-top: -210px;
+    padding-left: 150px;
+    
+}
+
+.jumbotron p {
+    margin: 4px;
+    font-size: 12px;
+}
+.jumbotron a{
+    text-decoration: none;
+    color: azure;
+    font-size: 14px;
+}
+/* foto */
+.jumbotron .foto img{
+    position: relative;
+    max-width: 200px;
+    box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.75);
+    margin-top: 150px;
+    margin-left: 800px;
+}
+/* akhir foto */
+.jumbotron .sosmed-1 img{
+    width: 14px;
+}
+
+.jumbotron .sosmed-2 img{
+    margin-top: 30px;
+    width: 26px;
+}
+
+.hello{
+    width: 80px;
+    height: 25px;
+    background-color: rgb(0, 219, 194);
+    box-sizing: border-box;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 40px 40px 40px 0;
+    color: azure;
+}
+
+/* akhir jumbotron */
+
+/* about */
+.about .row{
+    text-align: justify;
+    margin: 20px;
+}
+.about img{
+    width: 320px;
+    margin-top: 0;
+}
+.about .about-content{
+    margin-top: 70px;
+    margin-left: -30px;
+}
+.about .border{
+    color: azure;
+    padding: 3px;
+    margin-right: 5px;
+}
+.about .btn{
+    color: azure;
+}
+/* akhir about */
+
+
+/* pages */
+.pages{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.pages .judul{
+    margin-bottom: 50px;
+}
+.pages .col-sm-4{
+    margin-bottom: 50px;
+}
+.pages img{
+    width: 40px;
+    margin-bottom: 10px;
+}
+.pages h5{
+    color: rgb(31, 171, 236);
+}
+.pages p{
+    font-size: 14px;
+    font-style: normal;
+    letter-spacing: 0.3px;
+}
+/* akhir pages */
+
+/* skill */
+.skill{
+    margin-top: 50px;
+}
+.bar{
+    margin-top: 50px;
+}
+.skill .bar h5{
+    font-size: 14px;
+    text-align: left;
+    margin-left: 90px;
+}
+.skill .progress{
+    margin-left: 90px;
+}
+.progress{
+    width: 350px;
+    height: 7px;
+}
+.progress p{
+    position: absolute;
+    margin-left: 322px;
+    font-size: 14px;
+    margin-top: -10px;
+}
+
+/* circle */
+.skill .col-sm-6 .row{
+    margin-top: 50px;
+
+}
+.skill .col-sm-6 .row .col-6{
+    margin-bottom: 20px;
+    margin-right: -110px;
+    margin-left: 35px;
+}
+.skill .col-sm-6 .row .col-6 p{
+    margin-top: 5px;
+}
+
+
+/* css circle progress bar */
+/**
+ * Inspiration for this project found at:
+ * https://markus.oberlehner.net/blog/pure-css-animated-svg-circle-chart
+ * 1. The `reverse` animation direction plays the animation backwards
+ *    which makes it start at the stroke offset 100 which means displaying
+ *    no stroke at all and animating it to the value defined in the SVG
+ *    via the inline `stroke-dashoffset` attribute.
+ * 2. Rotate by -90 degree to make the starting point of the
+ *    stroke the top of the circle.
+ * 3. Using CSS transforms on SVG elements is not supported by Internet Explorer
+ *    and Edge, use the transform attribute directly on the SVG element as a
+ * .  workaround.
+ */
+
+.circle-chart {
+    width: 85px;
+    height: 85px;
+    
+}
+
+.circle-chart__circle {
+    stroke: #00acc1;
+    stroke-width: 2;
+    stroke-linecap: square;
+    fill: none;
+    animation: circle-chart-fill 2s reverse; /* 1 */ 
+    transform: rotate(-90deg); /* 2, 3 */
+    transform-origin: center; /* 4 */
+}
+
+/**
+   * 1. Rotate by -90 degree to make the starting point of the
+   *    stroke the top of the circle.
+   * 2. Scaling mirrors the circle to make the stroke move right
+   *    to mark a positive chart value.
+   * 3. Using CSS transforms on SVG elements is not supported by Internet Explorer
+   *    and Edge, use the transform attribute directly on the SVG element as a
+   * .  workaround.
+   */
+
+.circle-chart__circle--negative {
+    transform: rotate(-90deg) scale(1,-1); /* 1, 2, 3 */
+}
+
+.circle-chart__background {
+    stroke: #efefef;
+    stroke-width: 2;
+    fill: none; 
+}
+
+.circle-chart__info {
+    animation: circle-chart-appear 2s forwards;
+    opacity: 0;
+    transform: translateY(0.3em);
+}
+
+.circle-chart__percent {
+    alignment-baseline: central;
+    text-anchor: middle;
+    font-size: 10px;
+    fill: azure;
+}
+
+/* .circle-chart__subline {
+    alignment-baseline: central;
+    text-anchor: middle;
+    font-size: 3px;
+    fill: azure;
+} */
+
+.success-stroke {
+    stroke: #00C851;
+}
+
+.warning-stroke {
+    stroke: #ffbb33;
+}
+
+.danger-stroke {
+    stroke: #ff4444;
+}
+
+@keyframes circle-chart-fill {
+    to { stroke-dasharray: 0 100; }
+}
+
+@keyframes circle-chart-appear {
+    to {
+    opacity: 1;
+    transform: translateY(0);
+    }
+}
+
+/* akhir skill */
+
+/* education */
+.education{
+    margin-top: -40px;
+}
+
+.education .pendidikan, .pengalaman{
+    width: 400px;
+    height: 200px;
+    background-color: #1e1e25;
+    text-align: left;
+    margin-top: 50px;
+    margin: auto;
+    padding: 15px 10px 5px 10px;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 3px 3px 20px rgba(17, 79, 214, 0.75);
+}
+.education .pendidikan, .pengalaman{
+    margin: auto;
+    margin-top: 50px;
+}
+.education .pengalaman{
+    padding: 40px 10px 5px 10px;
+}
+.education .pendidikan, .pengalaman h5{
+    font-size: 18px;
+}
+.education .pendidikan p{
+    font-size: 16px;
+}
+
+.education span{
+    color: #00acc1;
+}
+.education hr{
+    border-top: 2px solid rgb(255, 255, 255);
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+/* akhir education */
+
+
+
+
+
+
+
+
+
+
+
+/* jarak */
+.portofolio .row,
+.contact .row{
+    text-align: justify;
+    margin: 20px;
+}
+/* hr -garis */
+.about hr,
+.portofolio hr,
+.contact hr{
+    width: 250px;
+    border-top: 3px solid black;
+    margin: auto;
+}
+
+/* portofolio */
+
+.portofolio h2{
+    margin-top: 20px;
+}
+.portofolio img{
+    margin-top: 15px;
+}
+
+/* contact */
+
+.contact{
+    min-height: 800px;
+    margin-top: -100px;
+}
+.contact .col-12 img{
+    opacity: 0.1;
+}
+.contact .row h4{
+    margin-left: 0px;
+}
+.contact .kontak{
+    position: absolute;
+    width: 250px;
+    height: 200px;
+    margin-top: -390px;
+    background-color: #1e1e25;
+    /* text-align: left;
+    margin-top: 50px;
+    margin: auto;
+    padding: 15px 10px 5px 10px; */
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 3px 3px 5px rgba(17, 79, 214, 0.40);
+    padding-top: 25px;
+    
+}
+.contact .col-sm-4{
+    margin-left: 70px;
+    margin-right: -100px;
+}
+.contact .row .bulat{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 1px solid #00acc1;
+    margin: auto;
+}
+.contact .row a img{
+    width: 15px;
+    margin-top: 25px;
+    z-index: 9999;
+}
+.contact .row h5{
+    font-size: 18px;
+    margin-top: 15px;
+}
+.contact .row p{
+    font-size: 14px;
+    margin-top: -25px;
+    padding: 30px;
+}
+
+/* form */
+.contact .col-sm-6{
+    margin-top: -100px;
+}
+.contact .col-sm-6 .email{
+    margin-top: 15px;
+}
+.contact .col-sm-6 .pesan{
+    margin-top: 0px;
+}
+.contact .col-sm-6 iframe{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+
+}
+/* akhir contact */
+
+footer{
+    color: azure;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.navbar{
+    box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.75);
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
+    
+
+}
+
+/* responsive*/
+
+@media screen and (max-width: 992px) {
+    .container-fluid{
+        margin-left: 0px;
+    }
+    /* jumbotron */
+    .hello{
+        margin: auto;
+    }
+    .jumbotron .container{
+        text-align: center;
+        margin-top: 10px;
+        padding-left: 0px;
+    }
+    .foto{
+        text-align: center;
+    }
+    .jumbotron .foto img{
+        max-width: 150px;
+        margin: 30px;
+        position: relative;
+        text-align: center;
+    }
+    /* akhir jumbotron */
+
+    /* about */
+    .about .about-content{
+        margin-top: 10px;
+        margin-left: 0px;
+    }
+    /* akhir about */
+
+    /* pages */
+    .pages{
+        margin-top: 100px;
+    }
+    .pages .col-sm-4{
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 10px;
+    }
+    /* akhir pages */
+
+    /* skill */
+    .skill .bar h5{
+        margin-left: 55px;
+    }
+    .skill .progress{
+        margin: auto;
+    }
+
+    /* circle */
+    .skill{
+        margin-top: -10px;
+    }
+    .skill .col-sm-6{
+        margin-top: 50px;
+    }
+    /* akhir skill */
+
+    /* education */
+    .education{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .education .col-sm-6{
+        margin-bottom: 50px;
+    }
+
+    /* education */
+
+    /* kontak */
+    .contact{
+        min-height: 800px;
+        margin-top: 0px;
+    }
+    .contact .row h4{
+        margin-left: 0px;
+    }
+    .contact .kontak{
+        margin-top: -130px;
+    }
+    .contact .col-sm-4{
+        margin-bottom: 220px;
+    }
+    .contact iframe{
+        margin-top: 150px;
+    }
+    /* akkhir kontak */
+}

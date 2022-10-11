@@ -395,12 +395,12 @@ section{
 .contact .col-sm-6 .pesan{
     margin-top: 0px;
 }
-.contact .col-sm-6 iframe{
+/* .contact .col-sm-6 iframe{
     width: 100%;
     height: 300px;
     border-radius: 10px;
 
-}
+} */
 /* akhir contact */
 
 footer{
